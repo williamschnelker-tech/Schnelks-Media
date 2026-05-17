@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #04091a;
+    color: #f1f5f9;
+    font-family: var(--font-inter), sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fcd34d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.35), 0 0 80px rgba(245, 158, 11, 0.15);
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl text-[#04091a] font-bold text-sm transition-all duration-200 hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #fcd34d, #fbbf24);
+    box-shadow: 0 6px 28px rgba(245, 158, 11, 0.5);
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 rounded-xl border border-white/15 text-gray-300 hover:text-white hover:border-amber-500/40 font-semibold text-sm transition-all duration-200 hover:bg-amber-500/5;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase;
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+  }
+
+  .card {
+    @apply border border-white/5 rounded-2xl transition-all duration-300 card-glow;
+    background: rgba(10, 21, 48, 0.8);
+  }
+
+  .section-photo {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+}
