@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <section
         className="pt-32 pb-20 relative"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 50%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&auto=format&fit=crop&q=80")',
+          backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.25) 55%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&auto=format&fit=crop&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
