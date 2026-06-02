@@ -88,10 +88,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/contact" className="text-base px-8 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
+            <Link href="/contact" className="text-base px-10 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 24px rgba(0,0,0,0.4)'}}>
               Get Started
             </Link>
-            <Link href="/services" className="text-base px-8 py-4 rounded-xl font-semibold flex items-center gap-2 text-white transition-all duration-200 hover:bg-white/10" style={{border:'1.5px solid rgba(255,255,255,0.7)'}}>
+            <Link href="/services" className="text-base px-10 py-4 rounded-xl font-bold flex items-center gap-2 text-white transition-all duration-200" style={{background:'rgba(255,255,255,0.18)', border:'2px solid rgba(255,255,255,0.9)', backdropFilter:'blur(4px)'}}>
               See How It Works
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
