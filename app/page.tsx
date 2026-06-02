@@ -110,9 +110,9 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             {stats.map((s) => (
-              <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl backdrop-blur-sm" style={{background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)'}}>
+              <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl" style={{background: 'rgba(255,255,255,0.95)'}}>
                 <span className="font-space font-bold text-xl text-gray-900">{s.value}</span>
-                <span className="text-slate-200 text-sm">{s.label}</span>
+                <span className="text-gray-600 text-sm">{s.label}</span>
               </div>
             ))}
           </div>
