@@ -34,8 +34,8 @@ const contactInfo = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    label: 'Address',
-    value: '280 Chimney Oaks Drive, Okemos, MI 48864',
+    label: 'Location',
+    value: 'Okemos, MI — Serving Michigan Statewide',
     href: null,
   },
   {

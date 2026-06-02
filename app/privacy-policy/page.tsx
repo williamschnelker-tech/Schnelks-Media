@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
               <p className="mb-4">If you have questions about this Privacy Policy or our data practices, contact us at:</p>
               <div className="card p-6 space-y-1">
                 <p className="text-white font-semibold">Schnelks Media (William Schnelker LLC)</p>
-                <p className="text-gray-400">280 Chimney Oaks Drive, Okemos, MI 48864</p>
+                <p className="text-gray-400">Okemos, MI 48864</p>
                 <a href="mailto:williamschnelker@gmail.com" className="block text-amber-400 hover:text-amber-300 transition-colors">williamschnelker@gmail.com</a>
                 <a href="tel:5178974843" className="block text-amber-400 hover:text-amber-300 transition-colors">(517) 897-4843</a>
               </div>
