@@ -72,28 +72,19 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-100 rounded-full blur-3xl opacity-40" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gray-50 rounded-full blur-3xl opacity-60" />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-8 text-white" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.35)'}}>
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            Built for Tree Service Companies
-          </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Built for Tree Service Companies</p>
 
           <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
-            More Google Reviews.{' '}
-            <span className="text-gray-300">On Autopilot.</span>
+            More Google Reviews.<br />On Autopilot.
           </h1>
 
-          <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
-            Schnelks Media automates Google review collection for tree service companies. After every completed job, your customer automatically gets a text asking for a review — so your rating climbs while you focus on the work.
+          <p className="text-white/85 text-lg max-w-2xl mx-auto mb-3 leading-relaxed">
+            After every completed job, your customer automatically gets a text asking for a Google review — so your rating climbs while you focus on the work.
           </p>
 
-          <p className="text-white/80 text-sm mb-10 font-medium">
-            Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC carrier requirements.
+          <p className="text-white/55 text-xs mb-10">
+            Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC requirements.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
