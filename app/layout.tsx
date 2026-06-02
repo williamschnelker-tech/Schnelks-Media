@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 
 export const metadata: Metadata = {
-  title: 'Schnelks Media | Google Ads, Websites & AI Automation',
+  title: 'Schnelks Media | Google Review Automation for Tree Service Companies',
   description:
-    'We run Google Ads, build and maintain websites, and set up AI automation for businesses. Real results, done for you.',
+    'Automated Google review collection for tree service companies. Set up once, works after every job.',
   openGraph: {
-    title: 'Schnelks Media | Google Ads, Websites & AI Automation',
-    description: 'Google Ads, website design, website upkeep, and AI automation — all done for you.',
+    title: 'Schnelks Media | Google Review Automation for Tree Service Companies',
+    description: 'Automated Google review collection for tree service companies. Set up once, works after every job.',
     type: 'website',
   },
 };
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="bg-[#04091a] text-gray-100 antialiased">
+      <body className="bg-white text-slate-900 antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/work', label: 'Our Work' },
+  { href: '/work', label: 'Results' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#04091a]/95 backdrop-blur-xl border-b border-amber-500/10 shadow-lg shadow-black/30'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -38,14 +38,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform" style={{background: 'linear-gradient(135deg, #fbbf24, #f59e0b)'}}>
-              <svg className="w-4 h-4 text-[#04091a]" fill="currentColor" viewBox="0 0 24 24">
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform" style={{background: 'linear-gradient(135deg, #16a34a, #15803d)'}}>
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
             <span className="font-space font-bold text-lg">
-              <span className="text-white">Schnelks</span>
-              <span className="text-amber-400">Media</span>
+              <span className="text-slate-900">Schnelks</span>
+              <span className="text-green-600">Media</span>
             </span>
           </Link>
 
@@ -57,8 +57,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   pathname === link.href
-                    ? 'text-amber-400 bg-amber-500/10'
-                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                    ? 'text-green-700 bg-green-50'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
                 {link.label}
@@ -69,14 +69,14 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Link href="/contact" className="btn-primary">
-              Book a Free Call
+              Get Started
             </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all"
+            className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
@@ -98,15 +98,15 @@ export default function Navbar() {
           mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-[#070e22] border-b border-amber-500/10 px-4 pb-4 pt-2 space-y-1">
+        <div className="bg-white border-b border-slate-200 px-4 pb-4 pt-2 space-y-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
                 pathname === link.href
-                  ? 'text-amber-400 bg-amber-500/10'
-                  : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  ? 'text-green-700 bg-green-50'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
               {link.label}
@@ -114,7 +114,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <Link href="/contact" className="btn-primary block text-center">
-              Book a Free Call
+              Get Started
             </Link>
           </div>
         </div>

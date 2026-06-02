@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact | Shnelks Media',
-  description: 'Book a free strategy call or send us a message. We respond within 24 hours.',
+  title: 'Contact | Schnelks Media',
+  description: 'Get in touch about Google review automation for your tree service company.',
 };
 
 const contactInfo = [
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "What if a customer isn't happy?",
-    a: "If a customer replies to the text with a complaint or concern instead of leaving a review, we forward that message directly to you privately. You get a chance to make it right before it ever becomes a public 1-star review.",
+    a: "If a customer replies with a complaint instead of leaving a review, we forward that message directly to you privately. You get a chance to make it right before it ever becomes a public 1-star review.",
   },
   {
     q: "Is this legal / compliant?",
@@ -91,50 +91,47 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative hero-grid gradient-mesh">
+      <section className="pt-32 pb-16 relative bg-white hero-grid">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-[500px] h-[400px] bg-blue-500/15 rounded-full blur-[100px]" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-600/12 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-cyan-500/8 rounded-full blur-[80px]" />
+          <div className="absolute top-0 left-1/4 w-[400px] h-[300px] bg-green-50 rounded-full blur-[100px] opacity-70" />
         </div>
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Let&apos;s Talk</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6">
+          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
             Get in Touch with{' '}
             <span className="text-gradient">Schnelks Media</span>
           </h1>
-          <p className="text-gray-400 text-lg mb-4">
+          <p className="text-slate-500 text-lg mb-4">
             Have a question about our review automation service? Want to see how it could work for your tree service business? Reach out — we typically respond within one business day.
           </p>
-          <p className="text-gray-500 text-sm">
+          <p className="text-slate-400 text-sm">
             Send a message below or call us directly at (517) 897-4843.
           </p>
         </div>
       </section>
 
       {/* Main content */}
-      <section className="pb-24">
+      <section className="pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Left: Info */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Contact details */}
               <div className="card p-8">
-                <h2 className="font-space font-bold text-xl text-white mb-6">Get in Touch</h2>
+                <h2 className="font-space font-bold text-xl text-slate-900 mb-6">Get in Touch</h2>
                 <div className="space-y-5">
                   {contactInfo.map((c) => (
                     <div key={c.label} className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center text-green-600 shrink-0">
                         {c.icon}
                       </div>
                       <div>
-                        <div className="text-gray-500 text-xs mb-0.5">{c.label}</div>
+                        <div className="text-slate-400 text-xs mb-0.5">{c.label}</div>
                         {c.href ? (
-                          <a href={c.href} className="text-gray-200 text-sm hover:text-white transition-colors">
+                          <a href={c.href} className="text-slate-700 text-sm hover:text-slate-900 transition-colors">
                             {c.value}
                           </a>
                         ) : (
-                          <div className="text-gray-200 text-sm">{c.value}</div>
+                          <div className="text-slate-700 text-sm">{c.value}</div>
                         )}
                       </div>
                     </div>
@@ -142,9 +139,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* What to expect */}
               <div className="card p-8">
-                <h2 className="font-space font-bold text-xl text-white mb-6">What to Expect</h2>
+                <h2 className="font-space font-bold text-xl text-slate-900 mb-6">What to Expect</h2>
                 <ul className="space-y-4">
                   {[
                     'See exactly how the review automation works',
@@ -152,8 +148,8 @@ export default function ContactPage() {
                     'Get answers to any questions you have',
                     'No pressure, no hard pitch',
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-gray-300 text-sm">
-                      <svg className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li key={item} className="flex items-start gap-3 text-slate-600 text-sm">
+                      <svg className="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -171,74 +167,18 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Calendly */}
-      <section className="pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="card overflow-hidden">
-            <div className="p-8 border-b border-white/5">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h2 className="font-space font-bold text-xl text-white">Book a Time Directly</h2>
-              </div>
-              <p className="text-gray-400 text-sm">Pick a time that works for you — 30-minute strategy call, no strings attached.</p>
-            </div>
-            {/* Calendly embed placeholder */}
-            <div className="bg-[#0d0d1a] min-h-[500px] flex items-center justify-center p-12">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mx-auto mb-5">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="font-space font-bold text-xl text-white mb-2">Calendly Booking</h3>
-                <p className="text-gray-400 text-sm mb-6 max-w-sm">
-                  Add your Calendly link to show the live booking calendar here. Replace this placeholder in{' '}
-                  <code className="text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded text-xs">app/contact/page.tsx</code>.
-                </p>
-                <a
-                  href="https://calendly.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Set Up Calendly →
-                </a>
-              </div>
-            </div>
-            {/*
-              TO ADD YOUR CALENDLY:
-              1. Go to calendly.com and create a free account
-              2. Create a 30-minute event type
-              3. Replace the div above with:
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/YOUR-USERNAME/30min"
-                style={{ minWidth: '320px', height: '630px' }}
-              />
-              4. Add this script tag in app/layout.tsx <head>:
-              <script src="https://assets.calendly.com/assets/external/widget.js" async />
-            -->
-            */}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="pb-24">
+      <section className="pb-24 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-space font-bold text-3xl text-white mb-3">Common Questions</h2>
-            <p className="text-gray-400">From roofing and landscaping owners who&apos;ve reached out before.</p>
+            <h2 className="font-space font-bold text-3xl text-slate-900 mb-3">Common Questions</h2>
+            <p className="text-slate-500">About our review automation service.</p>
           </div>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <div key={faq.q} className="card p-6">
-                <h3 className="font-space font-semibold text-white text-base mb-2">{faq.q}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                <h3 className="font-space font-semibold text-slate-900 text-base mb-2">{faq.q}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
