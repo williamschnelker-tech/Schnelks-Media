@@ -64,10 +64,17 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white hero-grid">
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.90) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-60" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-50 rounded-full blur-3xl opacity-80" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-40" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-50 rounded-full blur-3xl opacity-60" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
@@ -195,7 +202,14 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white">
+      <section
+        className="py-24 relative"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(15,23,42,0.92), rgba(15,23,42,0.92)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl p-12 text-center bg-slate-900">
             <h2 className="font-space font-bold text-4xl sm:text-5xl text-white mb-4">

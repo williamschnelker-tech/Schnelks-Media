@@ -77,11 +77,15 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 relative bg-white hero-grid">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-[500px] h-[400px] bg-green-50 rounded-full blur-[100px] opacity-70" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-[100px]" />
-        </div>
+      <section
+        className="pt-32 pb-20 relative"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Services</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">

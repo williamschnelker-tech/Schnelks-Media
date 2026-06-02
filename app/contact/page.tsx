@@ -91,10 +91,15 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative bg-white hero-grid">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[400px] h-[300px] bg-green-50 rounded-full blur-[100px] opacity-70" />
-        </div>
+      <section
+        className="pt-32 pb-16 relative"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Let&apos;s Talk</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
