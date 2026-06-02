@@ -90,7 +90,7 @@ export default function ServicesPage() {
           <span className="section-tag mb-6">Services</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What We Do for{' '}
-            <span className="text-gray-300">Tree Service Companies</span>
+            <span className="text-white">Tree Service Companies</span>
           </h1>
           <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
             Review automation is our core service. Paid ads are available as an add-on if you want more leads too.
