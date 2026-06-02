@@ -101,7 +101,7 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-tag mb-6">Let&apos;s Talk</span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 text-white/90" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.3)'}}>Let&apos;s Talk</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             Get in Touch with{' '}
             <span className="text-gray-300">Schnelks Media</span>
