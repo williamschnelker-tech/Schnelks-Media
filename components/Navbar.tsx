@@ -43,9 +43,8 @@ export default function Navbar() {
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="font-space font-bold text-lg">
-              <span className="text-slate-900">Schnelks</span>
-              <span className="text-gray-900">Media</span>
+            <span className={`font-space font-bold text-lg ${scrolled ? 'text-slate-900' : 'text-white'}`}>
+              Schnelks<span className={scrolled ? 'text-gray-500' : 'text-white/70'}>Media</span>
             </span>
           </Link>
 
@@ -57,8 +56,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   pathname === link.href
-                    ? 'text-gray-900 bg-gray-100'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? scrolled ? 'text-gray-900 bg-gray-100' : 'text-white bg-white/15'
+                    : scrolled ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100' : 'text-white/80 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {link.label}
@@ -76,7 +75,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all"
+            className={`md:hidden p-2 rounded-lg transition-all ${scrolled ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
