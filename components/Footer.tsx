@@ -40,7 +40,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Helping roofing and landscaping companies in Michigan get more leads with paid ads, SEO, websites, and AI automation.
+              Automated Google review collection for tree service companies. Set up once, works after every job.
             </p>
             <div className="mt-4 space-y-2">
               <a href="tel:5178974843" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">

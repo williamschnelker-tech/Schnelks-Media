@@ -2,69 +2,56 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Work | Schnelks Media',
-  description: 'See the type of work we do for roofing and landscaping companies in Michigan — websites, ads, SEO, and more.',
+  title: 'Results | Schnelks Media',
+  description: 'See what tree service companies get from automated Google review collection.',
 };
 
 const bigStats = [
-  { value: '3.8x', label: 'Avg Return on Ad Spend for Home Services', icon: '📈' },
-  { value: '60%', label: 'Average Reduction in Cost Per Lead', icon: '💰' },
-  { value: 'Page 1', label: 'Google Rankings We Target for Local SEO', icon: '🔍' },
-  { value: '< 60s', label: 'Lead Response Time With AI Automation', icon: '⚡' },
+  { value: '2–3x', label: 'More Reviews Per Month vs. Asking in Person', icon: '⭐' },
+  { value: '90%+', label: 'of Homeowners Read Reviews Before Hiring', icon: '👀' },
+  { value: '4.8★', label: 'Average Rating After 90 Days on the System', icon: '📈' },
+  { value: '1 Day', label: 'Setup Time — Running After Your Next Job', icon: '⚡' },
 ];
 
 const examples = [
   {
-    company: 'Example: Roofing Company',
-    type: 'Google Ads Campaign',
-    image: 'https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=900&auto=format&fit=crop&q=80',
-    description: 'A roofing company with no online presence runs Google Search Ads targeting homeowners searching for roof repair and replacement in their area. Calls start coming in within the first week.',
-    tags: ['Google Ads', 'Roofing'],
+    company: 'Example: Tree Service Company',
+    type: 'Review Automation — Getting Started',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=80',
+    description: 'A tree service company with 14 Google reviews and a 4.1 rating. They were doing good work but never remembered to ask for reviews. After setting up automated texts, review requests went out after every job — no extra effort.',
+    tags: ['Review Automation', 'Tree Service'],
     results: [
-      { label: 'Monthly Leads', value: '30–50+' },
-      { label: 'Cost Per Lead', value: '$40–$65' },
-      { label: 'Timeline to Launch', value: '7–10 Days' },
+      { label: 'Reviews in 60 Days', value: '+35' },
+      { label: 'Rating After 90 Days', value: '4.8★' },
+      { label: 'Setup Time', value: '1 Day' },
     ],
     color: 'blue',
   },
   {
-    company: 'Example: Landscaping Company',
-    type: 'Website Design + SEO',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=80',
-    description: 'A landscaping company with an outdated website gets a full redesign — fast, mobile-first, and SEO-optimized. Within a few months they\'re showing up on page 1 for searches in their service area.',
-    tags: ['Website Design', 'SEO', 'Landscaping'],
+    company: 'Example: Tree Service Company',
+    type: 'Review Automation + Google Ads',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&fit=crop&q=80',
+    description: 'A tree service owner who wanted both more reviews and more new leads. We set up review automation first, then launched Google Ads once his rating was strong enough to convert new visitors. Strong reviews make your ads convert better.',
+    tags: ['Review Automation', 'Google Ads', 'Tree Service'],
     results: [
-      { label: 'Google Ranking', value: 'Page 1 (local)' },
-      { label: 'Organic Monthly Leads', value: '15–25+' },
-      { label: 'Website Load Time', value: 'Under 2.5s' },
+      { label: 'New Leads Per Month', value: '25–40' },
+      { label: 'Google Rating', value: '4.9★' },
+      { label: 'Cost Per Lead', value: '$45–$70' },
     ],
     color: 'green',
   },
   {
-    company: 'Example: Roofing Company',
-    type: 'AI Lead Follow-Up Automation',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&fit=crop&q=80',
-    description: 'A roofer getting leads but losing them because he\'s on jobs all day. We set up automated texts that go out within 60 seconds of a new inquiry — so every lead gets a response before they call the next guy.',
-    tags: ['AI Automation', 'Roofing'],
+    company: 'Example: Tree Service Company',
+    type: 'Private Feedback Catch',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=80',
+    description: 'A customer who had a less-than-perfect experience replied to the review request text with their concern instead of leaving a 1-star review publicly. The owner was able to reach out, make it right, and the customer ended up leaving a 4-star review instead.',
+    tags: ['Review Automation', 'Private Feedback'],
     results: [
-      { label: 'Response Time', value: 'Under 60 Seconds' },
-      { label: 'Quote-to-Close Lift', value: '+20–30%' },
-      { label: 'Setup Time', value: '3–5 Days' },
+      { label: 'Bad Review Avoided', value: '1-star' },
+      { label: 'Outcome', value: '4-star instead' },
+      { label: 'How', value: 'Private reply' },
     ],
     color: 'cyan',
-  },
-  {
-    company: 'Example: Landscaping Company',
-    type: 'Google Ads + Website Combo',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80',
-    description: 'A landscaping company starting from scratch — no website, no ads. We build the site in two weeks and launch Google Ads immediately so leads start coming in while SEO builds up in the background.',
-    tags: ['Google Ads', 'Website Design', 'Landscaping'],
-    results: [
-      { label: 'Week 1 Leads', value: '8–15' },
-      { label: 'Website Live In', value: '2 Weeks' },
-      { label: 'First Month Booked Jobs', value: '5–12' },
-    ],
-    color: 'blue',
   },
 ];
 
@@ -85,18 +72,18 @@ export default function WorkPage() {
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-cyan-500/8 rounded-full blur-[80px]" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-tag mb-6">Our Work</span>
+          <span className="section-tag mb-6">Results</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6">
-            What We Build &amp;{' '}
-            <span className="text-gradient">What It Gets You</span>
+            What Tree Service Companies{' '}
+            <span className="text-gradient">Actually Get</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Here&apos;s the type of work we do for roofing and landscaping companies — and the kind of results you can expect. Every campaign and website is custom built around your business.
+            Representative examples of what review automation looks like in practice. Every setup is tailored to your business.
           </p>
         </div>
       </section>
 
-      {/* Industry Stats */}
+      {/* Stats */}
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -108,7 +95,7 @@ export default function WorkPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-600 text-xs mt-4">Industry benchmarks for home service businesses running paid ads and SEO.</p>
+          <p className="text-center text-gray-600 text-xs mt-4">Based on typical results from tree service businesses using automated review collection.</p>
         </div>
       </section>
 
@@ -116,12 +103,12 @@ export default function WorkPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="section-tag mb-4">Example Campaigns</span>
+            <span className="section-tag mb-4">Examples</span>
             <h2 className="font-space font-bold text-3xl sm:text-4xl mt-4 text-white">
-              The Type of Work We Do
+              How It Plays Out
             </h2>
             <p className="text-gray-400 mt-3 max-w-xl mx-auto text-sm">
-              These are representative examples of campaigns and builds — not specific client claims. Every project is tailored to the business.
+              These are representative scenarios — not specific client claims. Actual results vary.
             </p>
           </div>
 
@@ -153,7 +140,6 @@ export default function WorkPage() {
                     <h3 className="font-space font-bold text-2xl text-white mb-4">{ex.type}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed mb-8">{ex.description}</p>
 
-                    {/* Results */}
                     <div className="mb-8">
                       <div className="text-xs text-gray-500 uppercase tracking-wide mb-3 font-medium">Typical Results</div>
                       <div className="grid grid-cols-3 gap-3">
@@ -177,7 +163,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* New clients callout */}
+      {/* CTA */}
       <section className="py-8 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="card p-8 text-center border-blue-500/20">
@@ -188,11 +174,11 @@ export default function WorkPage() {
             </div>
             <h3 className="font-space font-bold text-xl text-white mb-2">Currently Taking On New Clients</h3>
             <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
-              We&apos;re actively working with roofing and landscaping companies in Michigan. Book a free call and we&apos;ll show you exactly what we&apos;d build for your business.
+              Tree service companies in Michigan. Get set up in a day and start collecting reviews after your very next job.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary">
-                Book a Free Strategy Call
+                Get Started
               </Link>
               <a href="tel:5178974843" className="btn-ghost flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

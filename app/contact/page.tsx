@@ -62,28 +62,28 @@ const contactInfo = [
 
 const faqs = [
   {
-    q: "What's included in the free strategy call?",
-    a: "A 30-minute call where we look at your current online presence, identify where you're missing leads, and lay out exactly what we'd do to fix it. No pitch, no pressure — just an honest conversation.",
+    q: "How does the review automation actually work?",
+    a: "After a job is completed, you add the customer's name and phone number to the system. Our platform automatically sends them a friendly SMS with a direct link to leave a Google review. If they don't respond in a day or two, one follow-up message goes out. That's it.",
   },
   {
-    q: "Do you work with companies that have never run ads before?",
-    a: "Yes — and honestly it's easier to start fresh than to fix a mess someone else made. We handle everything from scratch, including account setup, tracking, and your first campaign.",
+    q: "What if a customer isn't happy?",
+    a: "If a customer replies to the text with a complaint or concern instead of leaving a review, we forward that message directly to you privately. You get a chance to make it right before it ever becomes a public 1-star review.",
+  },
+  {
+    q: "Is this legal / compliant?",
+    a: "Yes. Our messages are fully compliant with Google's review policies, TCPA regulations, and A2P 10DLC carrier requirements. Every message includes an opt-out (STOP), and we never ask customers to leave only positive reviews.",
+  },
+  {
+    q: "How long does setup take?",
+    a: "Less than a day. We get your business name, Google review link, and message preferences — then the system is ready to go. You can start sending review requests after your very next job.",
   },
   {
     q: "Do you require long-term contracts?",
-    a: "No. Everything is month-to-month. We keep clients by getting results, not by locking them in. If we're not performing, you can walk — no hard feelings.",
+    a: "No. Month-to-month. If it's not working for you, you can cancel anytime.",
   },
   {
-    q: "How quickly can you launch?",
-    a: "Most campaigns are live within 7–10 days. A new website typically takes 2–3 weeks depending on how fast we get your info and photos.",
-  },
-  {
-    q: "I'm a roofer — is Google Ads or SEO better for me?",
-    a: "Both work great for roofing, but they work differently. Google Ads gets you leads immediately. SEO takes 3–6 months but then brings in free leads every month. Ideally you do both — we can walk you through the right starting point on the call.",
-  },
-  {
-    q: "What areas in Michigan do you serve?",
-    a: "All of Michigan. Our services are fully remote — no site visits needed except for drone footage, which we can schedule if you want that add-on.",
+    q: "Do you work with tree service companies outside Michigan?",
+    a: "Primarily Michigan, but reach out — we may be able to work with you depending on where you're located.",
   },
 ];
 
@@ -100,14 +100,14 @@ export default function ContactPage() {
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Let&apos;s Talk</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6">
-            Built for Roofers &amp;{' '}
-            <span className="text-gradient">Landscapers in Michigan</span>
+            Get in Touch with{' '}
+            <span className="text-gradient">Schnelks Media</span>
           </h1>
           <p className="text-gray-400 text-lg mb-4">
-            We specialize in helping roofing and landscaping companies get more leads, rank higher on Google, and build a professional online presence that actually converts — so you can stay focused on the work.
+            Have a question about our review automation service? Want to see how it could work for your tree service business? Reach out — we typically respond within one business day.
           </p>
           <p className="text-gray-500 text-sm">
-            Book a free 30-minute strategy call or send a message below. We respond within 24 hours.
+            Send a message below or call us directly at (517) 897-4843.
           </p>
         </div>
       </section>
@@ -144,12 +144,12 @@ export default function ContactPage() {
 
               {/* What to expect */}
               <div className="card p-8">
-                <h2 className="font-space font-bold text-xl text-white mb-6">On the Strategy Call</h2>
+                <h2 className="font-space font-bold text-xl text-white mb-6">What to Expect</h2>
                 <ul className="space-y-4">
                   {[
-                    'Audit your current ads & website',
-                    'Identify your biggest growth lever',
-                    'Map out a custom paid ads strategy',
+                    'See exactly how the review automation works',
+                    'Learn what setup looks like for your business',
+                    'Get answers to any questions you have',
                     'No pressure, no hard pitch',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-gray-300 text-sm">
