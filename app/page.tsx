@@ -78,8 +78,8 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 text-gray-900 text-xs font-semibold tracking-widest uppercase mb-8 bg-gray-50">
-            <span className="w-1.5 h-1.5 rounded-full bg-gray-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-8 text-white" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.35)'}}>
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             Built for Tree Service Companies
           </div>
 
@@ -92,15 +92,15 @@ export default function Home() {
             Schnelks Media automates Google review collection for tree service companies. After every completed job, your customer automatically gets a text asking for a review — so your rating climbs while you focus on the work.
           </p>
 
-          <p className="text-white/60 text-sm mb-10 font-medium">
+          <p className="text-white/80 text-sm mb-10 font-medium">
             Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC carrier requirements.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/contact" className="btn-primary text-base px-8 py-4">
+            <Link href="/contact" className="text-base px-8 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 14px rgba(0,0,0,0.25)'}}>
               Get Started
             </Link>
-            <Link href="/services" className="btn-ghost text-base px-8 py-4 flex items-center gap-2">
+            <Link href="/services" className="text-base px-8 py-4 rounded-xl font-semibold flex items-center gap-2 text-white transition-all duration-200 hover:bg-white/10" style={{border:'1.5px solid rgba(255,255,255,0.7)'}}>
               See How It Works
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
