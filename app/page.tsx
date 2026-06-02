@@ -307,6 +307,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SMS Review Automation */}
+      <section className="py-24" style={{background: '#04091a'}}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-3xl overflow-hidden p-10 sm:p-14" style={{background: 'rgba(10,21,48,0.8)', border: '1px solid rgba(245,158,11,0.2)'}}>
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{background: 'rgba(245,158,11,0.06)'}} />
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="section-tag mb-6">Review Automation</span>
+                <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-6">
+                  More Google Reviews.{' '}
+                  <span className="text-gradient">Zero Extra Work.</span>
+                </h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  Schnelks Media builds and operates SMS-based review automation systems for local service businesses. After your team completes a job, our system automatically texts the customer to request a Google review — boosting your online reputation without any extra work on your end.
+                </p>
+                <p className="text-gray-400 text-sm mb-8">
+                  All messages comply with Google&apos;s review policies, TCPA, and carrier A2P 10DLC requirements.
+                </p>
+                <Link href="/contact" className="btn-primary">See How It Works →</Link>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { step: '01', title: 'Job is Completed', desc: 'Your team finishes the job and logs it in the system.' },
+                  { step: '02', title: 'Customer Gets a Text', desc: 'Our system sends a friendly SMS with a direct link to leave a Google review.' },
+                  { step: '03', title: 'Reviews Roll In', desc: 'Customers click, leave a review, and your rating climbs — automatically.' },
+                ].map((item) => (
+                  <div key={item.step} className="flex items-start gap-4 card p-5">
+                    <div className="font-space font-bold text-amber-400 text-lg shrink-0 w-8">{item.step}</div>
+                    <div>
+                      <div className="font-space font-semibold text-white text-sm mb-1">{item.title}</div>
+                      <div className="text-gray-400 text-sm">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+                <p className="text-gray-600 text-xs px-1">
+                  Recipients can opt out at any time by replying STOP. Standard message and data rates may apply.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats banner — landscaping photo */}
       <section
         className="py-16 relative overflow-hidden"

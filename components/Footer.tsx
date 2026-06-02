@@ -7,6 +7,10 @@ const links = {
     { label: 'Our Work', href: '/work' },
     { label: 'Contact', href: '/contact' },
   ],
+  Legal: [
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'SMS Terms', href: '/sms-terms' },
+  ],
   Services: [
     { label: 'Paid Ads', href: '/services#ads' },
     { label: 'SEO', href: '/services#seo' },
@@ -114,11 +118,14 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Schnelks Media. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">
+            <Link href="/privacy-policy" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">
               Privacy Policy
             </Link>
+            <Link href="/sms-terms" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">
+              SMS Terms
+            </Link>
             <Link href="/contact" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">
-              Terms of Service
+              Contact
             </Link>
           </div>
         </div>
