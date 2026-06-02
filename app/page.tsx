@@ -88,11 +88,11 @@ export default function Home() {
             <span className="text-gray-300">On Autopilot.</span>
           </h1>
 
-          <p className="text-slate-200 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
+          <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
             Schnelks Media automates Google review collection for tree service companies. After every completed job, your customer automatically gets a text asking for a review — so your rating climbs while you focus on the work.
           </p>
 
-          <p className="text-gray-900 text-sm mb-10 font-medium">
+          <p className="text-white/60 text-sm mb-10 font-medium">
             Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC carrier requirements.
           </p>
 
