@@ -67,7 +67,7 @@ export default function Home() {
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.90) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
+          backgroundImage: 'linear-gradient(to bottom, rgba(10,20,40,0.70) 0%, rgba(10,20,40,0.65) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -83,16 +83,16 @@ export default function Home() {
             Built for Tree Service Companies
           </div>
 
-          <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-slate-900">
+          <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
             More Google Reviews.{' '}
             <span className="text-gradient">On Autopilot.</span>
           </h1>
 
-          <p className="text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
+          <p className="text-slate-200 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
             Schnelks Media automates Google review collection for tree service companies. After every completed job, your customer automatically gets a text asking for a review — so your rating climbs while you focus on the work.
           </p>
 
-          <p className="text-green-700 text-sm mb-10 font-medium">
+          <p className="text-green-300 text-sm mb-10 font-medium">
             Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC carrier requirements.
           </p>
 
@@ -110,9 +110,9 @@ export default function Home() {
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             {stats.map((s) => (
-              <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <span className="font-space font-bold text-xl text-green-600">{s.value}</span>
-                <span className="text-slate-500 text-sm">{s.label}</span>
+              <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl backdrop-blur-sm" style={{background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)'}}>
+                <span className="font-space font-bold text-xl text-green-300">{s.value}</span>
+                <span className="text-slate-200 text-sm">{s.label}</span>
               </div>
             ))}
           </div>

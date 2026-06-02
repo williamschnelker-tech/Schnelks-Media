@@ -94,7 +94,7 @@ export default function ContactPage() {
       <section
         className="pt-32 pb-16 relative"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
+          backgroundImage: 'linear-gradient(to bottom, rgba(10,20,40,0.72) 0%, rgba(10,20,40,0.65) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -102,14 +102,14 @@ export default function ContactPage() {
         <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Let&apos;s Talk</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
+          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             Get in Touch with{' '}
             <span className="text-gradient">Schnelks Media</span>
           </h1>
-          <p className="text-slate-500 text-lg mb-4">
+          <p className="text-slate-200 text-lg mb-4">
             Have a question about our review automation service? Want to see how it could work for your tree service business? Reach out — we typically respond within one business day.
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-300 text-sm">
             Send a message below or call us directly at (517) 897-4843.
           </p>
         </div>

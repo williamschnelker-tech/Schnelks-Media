@@ -68,7 +68,7 @@ export default function WorkPage() {
       <section
         className="pt-32 pb-20 relative"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&auto=format&fit=crop&q=80")',
+          backgroundImage: 'linear-gradient(to bottom, rgba(10,20,40,0.72) 0%, rgba(10,20,40,0.65) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&auto=format&fit=crop&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -76,11 +76,11 @@ export default function WorkPage() {
         <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Results</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
+          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What Tree Service Companies{' '}
             <span className="text-gradient">Actually Get</span>
           </h1>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-200 text-lg max-w-2xl mx-auto">
             Representative examples of what review automation looks like in practice. Every setup is tailored to your business.
           </p>
         </div>

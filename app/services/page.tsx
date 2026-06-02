@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <section
         className="pt-32 pb-20 relative"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&auto=format&fit=crop&q=80")',
+          backgroundImage: 'linear-gradient(to bottom, rgba(10,20,40,0.72) 0%, rgba(10,20,40,0.65) 60%, rgba(255,255,255,1) 100%), url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&auto=format&fit=crop&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -88,16 +88,16 @@ export default function ServicesPage() {
         <div className="absolute inset-0 pointer-events-none" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="section-tag mb-6">Services</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
+          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What We Do for{' '}
             <span className="text-gradient">Tree Service Companies</span>
           </h1>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto mb-6">
+          <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
             Review automation is our core service. Paid ads are available as an add-on if you want more leads too.
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-sm">
             {['Review Automation', 'Google Ads', 'Meta Ads'].map((s) => (
-              <span key={s} className="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600">
+              <span key={s} className="px-3 py-1 rounded-full border text-slate-200" style={{background:'rgba(255,255,255,0.1)', borderColor:'rgba(255,255,255,0.2)'}}>
                 {s}
               </span>
             ))}
