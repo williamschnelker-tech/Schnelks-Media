@@ -70,8 +70,8 @@ export default function SmsTermsPage() {
               <div className="space-y-1 text-sm">
                 <p className="text-slate-700 font-semibold">Schnelks Media (William Schnelker LLC)</p>
                 <p className="text-slate-500">Okemos, MI 48864</p>
-                <a href="mailto:williamschnelker@gmail.com" className="block text-green-600 hover:text-green-700">williamschnelker@gmail.com</a>
-                <a href="tel:5178974843" className="block text-green-600 hover:text-green-700">(517) 897-4843</a>
+                <a href="mailto:williamschnelker@gmail.com" className="block text-gray-900 hover:text-gray-900">williamschnelker@gmail.com</a>
+                <a href="tel:5178974843" className="block text-gray-900 hover:text-gray-900">(517) 897-4843</a>
               </div>
             </div>
 

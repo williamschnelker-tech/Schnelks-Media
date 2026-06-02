@@ -52,7 +52,7 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="card p-12 text-center h-full flex flex-col items-center justify-center min-h-[400px]">
-        <div className="w-16 h-16 rounded-full bg-green-50 border border-green-200 flex items-center justify-center text-green-600 mx-auto mb-6">
+        <div className="w-16 h-16 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-900 mx-auto mb-6">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
@@ -77,7 +77,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label htmlFor="name" className="block text-slate-600 text-xs mb-2 font-medium">
-              Your Name <span className="text-green-600">*</span>
+              Your Name <span className="text-gray-900">*</span>
             </label>
             <input
               id="name"
@@ -87,12 +87,12 @@ export default function ContactForm() {
               value={form.name}
               onChange={handleChange}
               placeholder="John Smith"
-              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400/30 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-slate-600 text-xs mb-2 font-medium">
-              Email Address <span className="text-green-600">*</span>
+              Email Address <span className="text-gray-900">*</span>
             </label>
             <input
               id="email"
@@ -102,7 +102,7 @@ export default function ContactForm() {
               value={form.email}
               onChange={handleChange}
               placeholder="john@company.com"
-              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400/30 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
             />
           </div>
         </div>
@@ -118,13 +118,13 @@ export default function ContactForm() {
             value={form.business}
             onChange={handleChange}
             placeholder="Your Tree Service LLC"
-            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400/30 transition-all"
+            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
           />
         </div>
 
         <div>
           <label htmlFor="service" className="block text-slate-600 text-xs mb-2 font-medium">
-            What are you interested in? <span className="text-green-600">*</span>
+            What are you interested in? <span className="text-gray-900">*</span>
           </label>
           <select
             id="service"
@@ -132,7 +132,7 @@ export default function ContactForm() {
             required
             value={form.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400/30 transition-all appearance-none cursor-pointer"
+            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all appearance-none cursor-pointer"
           >
             <option value="" disabled>Select a service</option>
             {services.map((s) => (
@@ -143,7 +143,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="message" className="block text-slate-600 text-xs mb-2 font-medium">
-            Tell Us About Your Business <span className="text-green-600">*</span>
+            Tell Us About Your Business <span className="text-gray-900">*</span>
           </label>
           <textarea
             id="message"
@@ -153,7 +153,7 @@ export default function ContactForm() {
             value={form.message}
             onChange={handleChange}
             placeholder="How many jobs do you do per week? What's your current Google rating? Anything else we should know?"
-            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400/30 transition-all resize-none"
+            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all resize-none"
           />
         </div>
 

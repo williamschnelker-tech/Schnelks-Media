@@ -90,7 +90,7 @@ export default function ServicesPage() {
           <span className="section-tag mb-6">Services</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What We Do for{' '}
-            <span className="text-gradient">Tree Service Companies</span>
+            <span className="text-gray-300">Tree Service Companies</span>
           </h1>
           <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
             Review automation is our core service. Paid ads are available as an add-on if you want more leads too.
@@ -118,12 +118,12 @@ export default function ServicesPage() {
                 <p className="text-slate-500 leading-relaxed mb-8">{s.description}</p>
 
                 <div className="flex gap-6 mb-8">
-                  <div className="px-4 py-3 rounded-xl bg-green-50 border border-green-100 text-center min-w-[100px]">
-                    <div className="font-space font-bold text-2xl text-green-600">{s.stat1.value}</div>
+                  <div className="px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-center min-w-[100px]">
+                    <div className="font-space font-bold text-2xl text-gray-900">{s.stat1.value}</div>
                     <div className="text-slate-500 text-xs mt-0.5">{s.stat1.label}</div>
                   </div>
-                  <div className="px-4 py-3 rounded-xl bg-green-50 border border-green-100 text-center min-w-[100px]">
-                    <div className="font-space font-bold text-2xl text-green-600">{s.stat2.value}</div>
+                  <div className="px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-center min-w-[100px]">
+                    <div className="font-space font-bold text-2xl text-gray-900">{s.stat2.value}</div>
                     <div className="text-slate-500 text-xs mt-0.5">{s.stat2.label}</div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                 <ul className="space-y-3 mb-6">
                   {s.deliverables.map((d) => (
                     <li key={d} className="flex items-start gap-3 text-slate-600 text-sm">
-                      <svg className="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-gray-900 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {d}
@@ -174,7 +174,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {process.map((p) => (
               <div key={p.step} className="card p-6">
-                <div className="font-space font-bold text-4xl text-green-100 mb-4">{p.step}</div>
+                <div className="font-space font-bold text-4xl text-gray-900 mb-4">{p.step}</div>
                 <h3 className="font-space font-bold text-slate-900 text-lg mb-2">{p.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
               </div>
@@ -194,9 +194,9 @@ export default function ServicesPage() {
           </p>
           <p className="text-slate-400 text-sm mb-10">
             Questions? Call or text:{' '}
-            <a href="tel:5178974843" className="text-green-600 hover:text-green-700">(517) 897-4843</a>
+            <a href="tel:5178974843" className="text-gray-900 hover:text-gray-900">(517) 897-4843</a>
             {' '}·{' '}
-            <a href="mailto:williamschnelker@gmail.com" className="text-green-600 hover:text-green-700">williamschnelker@gmail.com</a>
+            <a href="mailto:williamschnelker@gmail.com" className="text-gray-900 hover:text-gray-900">williamschnelker@gmail.com</a>
           </p>
           <Link href="/contact" className="btn-primary text-base px-10 py-4">
             Get Started

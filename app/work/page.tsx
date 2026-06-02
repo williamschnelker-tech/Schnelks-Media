@@ -56,7 +56,7 @@ const examples = [
 ];
 
 const colorMap: Record<string, { tag: string; stat: string }> = {
-  green: { tag: 'text-green-700 bg-green-50 border-green-200', stat: 'text-green-600 bg-green-50 border-green-100' },
+  green: { tag: 'text-gray-900 bg-gray-50 border-gray-200', stat: 'text-gray-900 bg-gray-50 border-gray-200' },
   blue: { tag: 'text-blue-700 bg-blue-50 border-blue-200', stat: 'text-blue-600 bg-blue-50 border-blue-100' },
   slate: { tag: 'text-slate-700 bg-slate-100 border-slate-200', stat: 'text-slate-600 bg-slate-50 border-slate-200' },
 };
@@ -78,7 +78,7 @@ export default function WorkPage() {
           <span className="section-tag mb-6">Results</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What Tree Service Companies{' '}
-            <span className="text-gradient">Actually Get</span>
+            <span className="text-gray-300">Actually Get</span>
           </h1>
           <p className="text-slate-200 text-lg max-w-2xl mx-auto">
             Representative examples of what review automation looks like in practice. Every setup is tailored to your business.

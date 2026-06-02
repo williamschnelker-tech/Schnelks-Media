@@ -104,7 +104,7 @@ export default function ContactPage() {
           <span className="section-tag mb-6">Let&apos;s Talk</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             Get in Touch with{' '}
-            <span className="text-gradient">Schnelks Media</span>
+            <span className="text-gray-300">Schnelks Media</span>
           </h1>
           <p className="text-slate-200 text-lg mb-4">
             Have a question about our review automation service? Want to see how it could work for your tree service business? Reach out — we typically respond within one business day.
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 <div className="space-y-5">
                   {contactInfo.map((c) => (
                     <div key={c.label} className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center text-green-600 shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-900 shrink-0">
                         {c.icon}
                       </div>
                       <div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     'No pressure, no hard pitch',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-slate-600 text-sm">
-                      <svg className="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-gray-900 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}

@@ -13,14 +13,14 @@
 
   body {
     background-color: #ffffff;
-    color: #0f172a;
+    color: #111827;
     font-family: var(--font-inter), sans-serif;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #22c55e 100%);
+    background: linear-gradient(135deg, #111827 0%, #374151 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -34,37 +34,37 @@
   }
 
   .glow-gold {
-    box-shadow: 0 0 40px rgba(22, 163, 74, 0.25), 0 0 80px rgba(22, 163, 74, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
   }
 
   .card-glow:hover {
-    box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.15), 0 8px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .btn-primary {
     @apply px-6 py-3 rounded-xl text-white font-bold text-sm transition-all duration-200 hover:-translate-y-0.5;
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+    background: #111827;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    box-shadow: 0 6px 24px rgba(22, 163, 74, 0.4);
+    background: #1f2937;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   }
 
   .btn-ghost {
-    @apply px-6 py-3 rounded-xl border border-slate-200 text-slate-700 hover:text-slate-900 hover:border-green-400 font-semibold text-sm transition-all duration-200 hover:bg-green-50;
+    @apply px-6 py-3 rounded-xl border border-gray-300 text-gray-700 hover:text-gray-900 hover:border-gray-900 font-semibold text-sm transition-all duration-200 hover:bg-gray-50;
   }
 
   .section-tag {
     @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase;
-    background: rgba(22, 163, 74, 0.08);
-    color: #16a34a;
-    border: 1px solid rgba(22, 163, 74, 0.2);
+    background: rgba(17, 24, 39, 0.06);
+    color: #374151;
+    border: 1px solid rgba(17, 24, 39, 0.15);
   }
 
   .card {
-    @apply border border-slate-200 rounded-2xl bg-white transition-all duration-300 card-glow;
+    @apply border border-gray-200 rounded-2xl bg-white transition-all duration-300 card-glow;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   }
 

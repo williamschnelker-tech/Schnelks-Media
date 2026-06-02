@@ -73,26 +73,26 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-40" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-50 rounded-full blur-3xl opacity-60" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-100 rounded-full blur-3xl opacity-40" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gray-50 rounded-full blur-3xl opacity-60" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-200 text-green-700 text-xs font-semibold tracking-widest uppercase mb-8 bg-green-50">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 text-gray-900 text-xs font-semibold tracking-widest uppercase mb-8 bg-gray-50">
+            <span className="w-1.5 h-1.5 rounded-full bg-gray-500 animate-pulse" />
             Built for Tree Service Companies
           </div>
 
           <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
             More Google Reviews.{' '}
-            <span className="text-gradient">On Autopilot.</span>
+            <span className="text-gray-300">On Autopilot.</span>
           </h1>
 
           <p className="text-slate-200 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
             Schnelks Media automates Google review collection for tree service companies. After every completed job, your customer automatically gets a text asking for a review — so your rating climbs while you focus on the work.
           </p>
 
-          <p className="text-green-300 text-sm mb-10 font-medium">
+          <p className="text-gray-900 text-sm mb-10 font-medium">
             Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC carrier requirements.
           </p>
 
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             {stats.map((s) => (
               <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl backdrop-blur-sm" style={{background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)'}}>
-                <span className="font-space font-bold text-xl text-green-300">{s.value}</span>
+                <span className="font-space font-bold text-xl text-gray-900">{s.value}</span>
                 <span className="text-slate-200 text-sm">{s.label}</span>
               </div>
             ))}
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {howItWorks.map((item) => (
               <div key={item.step} className="card p-6">
-                <div className="font-space font-bold text-4xl text-green-200 mb-4">{item.step}</div>
+                <div className="font-space font-bold text-4xl text-gray-900 mb-4">{item.step}</div>
                 <h3 className="font-space font-bold text-slate-900 text-lg mb-2">{item.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyReviews.map((w) => (
               <div key={w.title} className="card p-6">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-green-600 mb-4 bg-green-50 border border-green-100">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-900 mb-4 bg-gray-50 border border-gray-200">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
@@ -184,10 +184,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div key={t.author} className="card p-8">
-                <div className="text-green-200 text-6xl font-serif leading-none mb-4 font-bold">&ldquo;</div>
+                <div className="text-gray-900 text-6xl font-serif leading-none mb-4 font-bold">&ldquo;</div>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">{t.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-green-700 text-xs font-bold bg-green-50 border border-green-100">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-gray-900 text-xs font-bold bg-gray-50 border border-gray-200">
                     {t.avatar}
                   </div>
                   <div>

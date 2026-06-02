@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
 
             <div>
               <h2 className="font-space font-bold text-slate-900 text-xl mb-3">8. Your Rights</h2>
-              <p>Depending on where you live, you may have rights regarding your personal information, including the right to access, correct, or delete it. Contact us at <a href="mailto:williamschnelker@gmail.com" className="text-green-600 hover:text-green-700">williamschnelker@gmail.com</a>.</p>
+              <p>Depending on where you live, you may have rights regarding your personal information, including the right to access, correct, or delete it. Contact us at <a href="mailto:williamschnelker@gmail.com" className="text-gray-900 hover:text-gray-900">williamschnelker@gmail.com</a>.</p>
             </div>
 
             <div>
@@ -114,8 +114,8 @@ export default function PrivacyPolicyPage() {
               <div className="card p-6 space-y-1 bg-slate-50">
                 <p className="text-slate-900 font-semibold">Schnelks Media (William Schnelker LLC)</p>
                 <p className="text-slate-500">Okemos, MI 48864</p>
-                <a href="mailto:williamschnelker@gmail.com" className="block text-green-600 hover:text-green-700">williamschnelker@gmail.com</a>
-                <a href="tel:5178974843" className="block text-green-600 hover:text-green-700">(517) 897-4843</a>
+                <a href="mailto:williamschnelker@gmail.com" className="block text-gray-900 hover:text-gray-900">williamschnelker@gmail.com</a>
+                <a href="tel:5178974843" className="block text-gray-900 hover:text-gray-900">(517) 897-4843</a>
               </div>
             </div>
 
