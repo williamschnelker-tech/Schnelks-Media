@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
             Privacy <span className="text-gradient">Policy</span>
           </h1>
           <p className="text-slate-400 text-sm">
-            Effective Date: June 2, 2026 &nbsp;·&nbsp; Last Updated: June 2, 2026
+            Effective Date: June 2, 2026 &nbsp;·&nbsp; Last Updated: July 17, 2026
           </p>
         </div>
       </section>
@@ -80,8 +80,8 @@ export default function PrivacyPolicyPage() {
 
             <div>
               <h2 className="font-space font-bold text-slate-900 text-xl mb-3">5. SMS Messaging Specifically</h2>
-              <p className="mb-4">SMS messages sent through our system are sent on behalf of our clients to their customers, who have provided their phone numbers directly to the business at the time of service. Recipients may opt out at any time by replying STOP. Message and data rates may apply.</p>
-              <p className="font-medium text-slate-700">Mobile opt-in data and consent are not shared with third parties for marketing purposes.</p>
+              <p className="mb-4">SMS messages sent through our system are sent on behalf of our clients to their customers, who have provided their phone numbers directly to the business at the time of service. Recipients typically receive one (1) review request message after a completed job, plus up to one (1) follow-up message if no response is received within approximately two (2) days. Message frequency varies based on services completed. Message and data rates may apply. Recipients may opt out at any time by replying STOP, or reply HELP for assistance.</p>
+              <p className="font-medium text-slate-700">Mobile opt-in data and consent are not shared with any third parties or affiliates for marketing or promotional purposes.</p>
             </div>
 
             <div>
