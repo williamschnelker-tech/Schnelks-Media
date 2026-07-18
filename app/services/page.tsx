@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Services | Schnelks Media',
-  description: 'Google review automation and paid ads for tree service companies.',
+  description: 'Google review automation and paid ads for service-based companies.',
 };
 
 const services = [
@@ -22,10 +22,10 @@ const services = [
       'Private feedback channel — unhappy customers reply directly to you',
       'STOP opt-out handled automatically',
       'TCPA and A2P 10DLC compliant messaging',
-      'Setup takes less than a day',
+      'Setup takes about 30 minutes',
     ],
-    stat1: { value: '2–3x', label: 'More Reviews Per Month' },
-    stat2: { value: '1 Day', label: 'Setup Time' },
+    stat1: { value: '1 Text', label: 'Per Completed Job' },
+    stat2: { value: '30 Min', label: 'Setup Time' },
     note: null,
   },
   {
@@ -37,14 +37,14 @@ const services = [
     image: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&auto=format&fit=crop&q=80',
     imageAlt: 'Google and Meta ads',
     deliverables: [
-      'Google Search Ads — show up when people search for tree services',
+      'Google Search Ads — show up when people search for your services',
       'Meta Ads — reach local homeowners on Facebook and Instagram',
       'Campaign setup, targeting, and ongoing management',
       'Conversion tracking so you know where leads come from',
       'Regular performance updates in plain English',
       'Budget management — no wasted spend',
     ],
-    stat1: { value: '3.8x', label: 'Average ROAS' },
+    stat1: { value: 'Custom', label: 'Budget & Targeting' },
     stat2: { value: '7–10 Days', label: 'To Launch' },
     note: 'Ask about availability when you reach out.',
   },
@@ -59,7 +59,7 @@ const process = [
   {
     step: '02',
     title: 'We Set You Up',
-    description: 'We configure the system with your business name, Google review link, and message timing. Takes less than a day.',
+    description: 'We configure the system with your business name, Google review link, and message timing. Takes about 30 minutes.',
   },
   {
     step: '03',
@@ -90,7 +90,7 @@ export default function ServicesPage() {
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 text-white/90" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.3)'}}>Services</span>
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
             What We Do for{' '}
-            <span className="text-white">Tree Service Companies</span>
+            <span className="text-white">Service-Based Companies</span>
           </h1>
           <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
             Review automation is our core service. Paid ads are available as an add-on if you want more leads too.
@@ -167,7 +167,7 @@ export default function ServicesPage() {
             <span className="section-tag mb-4">Getting Started</span>
             <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 text-slate-900">
               Up and Running{' '}
-              <span className="text-gradient">Same Day</span>
+              <span className="text-gradient">In Minutes</span>
             </h2>
           </div>
 

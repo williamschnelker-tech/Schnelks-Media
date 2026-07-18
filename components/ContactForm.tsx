@@ -117,7 +117,7 @@ export default function ContactForm() {
             type="text"
             value={form.business}
             onChange={handleChange}
-            placeholder="Your Tree Service LLC"
+            placeholder="Your Company LLC"
             className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
           />
         </div>

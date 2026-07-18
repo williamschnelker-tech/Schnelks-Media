@@ -3,7 +3,7 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | Schnelks Media',
-  description: 'Get in touch about Google review automation for your tree service company.',
+  description: 'Get in touch about Google review automation for your service-based business.',
 };
 
 const contactInfo = [
@@ -55,7 +55,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Service Area',
-    value: 'Michigan statewide — tree service, roofing & home trades',
+    value: 'Michigan statewide — home & trade service businesses',
     href: null,
   },
 ];
@@ -75,14 +75,14 @@ const faqs = [
   },
   {
     q: "How long does setup take?",
-    a: "Less than a day. We get your business name, Google review link, and message preferences — then the system is ready to go. You can start sending review requests after your very next job.",
+    a: "About 30 minutes. We get your business name, Google review link, and message preferences — then the system is ready to go. You can start sending review requests after your very next job.",
   },
   {
     q: "Do you require long-term contracts?",
     a: "No. Month-to-month. If it's not working for you, you can cancel anytime.",
   },
   {
-    q: "Do you work with tree service companies outside Michigan?",
+    q: "Do you work with service-based companies outside Michigan?",
     a: "Primarily Michigan, but reach out — we may be able to work with you depending on where you're located.",
   },
 ];
@@ -107,7 +107,7 @@ export default function ContactPage() {
             <span className="text-gray-300">Schnelks Media</span>
           </h1>
           <p className="text-slate-200 text-lg mb-4">
-            Have a question about our review automation service? Want to see how it could work for your tree service business? Reach out — we typically respond within one business day.
+            Have a question about our review automation service? Want to see how it could work for your business? Reach out — we typically respond within one business day.
           </p>
           <p className="text-slate-300 text-sm">
             Send a message below or call us directly at (517) 897-4843.

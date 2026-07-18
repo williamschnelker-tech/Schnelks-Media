@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const terms = [
   {
     title: 'About Our SMS Service',
-    body: 'Schnelks Media operates an SMS messaging service on behalf of our clients (local service businesses, including tree service companies and similar trades). Our clients use our service to send a one-time review request message, plus an optional follow-up message, to their own customers after completing a service job.',
+    body: 'Schnelks Media operates an SMS messaging service on behalf of our clients (local service-based businesses, including tree service, home service, and similar trades). Our clients use our service to send a one-time review request message, plus an optional follow-up message, to their own customers after completing a service job.',
   },
   {
     title: 'How Recipients Are Added',
@@ -21,7 +21,7 @@ const terms = [
   },
   {
     title: 'Message and Data Rates',
-    body: "Standard message and data rates may apply, depending on the recipient's mobile carrier and plan.",
+    body: "Message and data rates may apply, depending on the recipient's mobile carrier and plan.",
   },
   {
     title: 'Opting Out',

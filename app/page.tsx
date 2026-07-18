@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
 const stats = [
-  { value: '4.9★', label: 'Avg Rating After 90 Days' },
-  { value: '2–3x', label: 'More Reviews Per Month' },
   { value: '1 Text', label: 'Per Completed Job' },
   { value: '100%', label: 'TCPA Compliant' },
 ];
@@ -32,32 +30,11 @@ const howItWorks = [
 
 const whyReviews = [
   { title: 'Reviews Drive Local Rankings', description: 'Google uses your review count and rating as a local ranking signal. More reviews = higher placement in map results.' },
-  { title: 'Customers Read Before Calling', description: 'Over 90% of homeowners check reviews before hiring a tree service. A strong rating closes the deal before you pick up the phone.' },
-  { title: 'Most Happy Customers Don\'t Leave Reviews', description: 'Satisfied customers forget. An automated text right after the job is the most effective way to turn them into 5-star reviews.' },
+  { title: 'Customers Read Before Calling', description: 'Over 90% of homeowners check reviews before hiring a service business. A strong rating closes the deal before you pick up the phone.' },
+  { title: 'Most Happy Customers Don\'t Leave Reviews', description: 'Satisfied customers forget. An automated text right after the job is a proven way to reach customers while the work is still fresh.' },
   { title: 'Fully Automated — Zero Extra Work', description: 'You don\'t have to remember to ask or follow up. The system handles it while you\'re on to the next job.' },
   { title: 'Carrier & Google Compliant', description: 'All messages meet Google\'s review policies, TCPA requirements, and A2P 10DLC carrier standards.' },
   { title: 'Private Feedback Stays Private', description: 'If a customer isn\'t happy, they can reply directly — we forward it to you privately so it never becomes a public 1-star.' },
-];
-
-const testimonials = [
-  {
-    quote: "We went from 12 Google reviews to 47 in about two months. I didn't change anything — customers just started texting me back saying they left one.",
-    author: 'Mike T.',
-    role: 'Owner, Tree Service — Mid-Michigan',
-    avatar: 'MT',
-  },
-  {
-    quote: "I used to ask every customer in person and maybe 1 in 10 would actually do it. Now it just happens automatically. Wish I had this sooner.",
-    author: 'Jason R.',
-    role: 'Owner, Tree & Stump Removal',
-    avatar: 'JR',
-  },
-  {
-    quote: "Our rating went from 4.1 to 4.8. We're getting calls now from people who say they found us on Google and liked our reviews. That didn't happen before.",
-    author: 'Dave M.',
-    role: 'Owner, Full-Service Tree Care',
-    avatar: 'DM',
-  },
 ];
 
 export default function Home() {
@@ -73,7 +50,7 @@ export default function Home() {
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Built for Tree Service Companies</p>
+          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Built for Service-Based Companies</p>
 
           <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
             More Google Reviews.<br />On Autopilot.
@@ -120,7 +97,7 @@ export default function Home() {
               <span className="text-gradient">Works Every Job.</span>
             </h2>
             <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              You do the tree work. We handle the review collection.
+              You do the work. We handle the review collection.
             </p>
           </div>
 
@@ -142,7 +119,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <span className="section-tag mb-4">Why It Matters</span>
             <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 text-slate-900">
-              Why Tree Service Companies{' '}
+              Why Service-Based Companies{' '}
               <span className="text-gradient">Need More Reviews</span>
             </h2>
           </div>
@@ -162,33 +139,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Launching */}
       <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-tag mb-4">Results</span>
-            <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 text-slate-900">
-              What Tree Service Owners{' '}
-              <span className="text-gradient">Are Saying</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.author} className="card p-8">
-                <div className="text-gray-900 text-6xl font-serif leading-none mb-4 font-bold">&ldquo;</div>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">{t.quote}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-gray-900 text-xs font-bold bg-gray-50 border border-gray-200">
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <div className="text-slate-900 text-sm font-semibold">{t.author}</div>
-                    <div className="text-slate-400 text-xs">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="section-tag mb-4">Now Onboarding</span>
+          <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-6 text-slate-900">
+            Launching in{' '}
+            <span className="text-gradient">Mid-Michigan</span>
+          </h2>
+          <p className="text-slate-500 text-lg leading-relaxed">
+            Schnelks Media is currently onboarding its first group of service-based clients in Michigan. Founding clients lock in launch pricing for the life of their account.
+          </p>
         </div>
       </section>
 
@@ -207,7 +168,7 @@ export default function Home() {
               Ready to Start Getting More Reviews?
             </h2>
             <p className="text-slate-300 text-lg max-w-xl mx-auto mb-4">
-              Get set up in a day. After that, every job you complete is another review request sent automatically.
+              Get set up in 30 minutes. After that, every job you complete is another review request sent automatically.
             </p>
             <p className="text-slate-500 text-sm mb-10">No contracts. No extra work on your end.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -32,7 +32,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-              Automated Google review collection for tree service companies. Set up once, works after every job.
+              Automated Google review collection for service-based businesses. Set up once, works after every job.
             </p>
             <div className="mt-4 space-y-2">
               <a href="tel:5178974843" className="flex items-center gap-2 text-slate-500 hover:text-slate-900 text-sm transition-colors">

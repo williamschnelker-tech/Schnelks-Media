@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 
 export const metadata: Metadata = {
-  title: 'Schnelks Media | Google Review Automation for Tree Service Companies',
+  title: 'Schnelks Media | Google Review Automation for Service Businesses',
   description:
-    'Automated Google review collection for tree service companies. Set up once, works after every job.',
+    'Automated Google review collection for service-based businesses. Set up once, works after every job.',
   openGraph: {
-    title: 'Schnelks Media | Google Review Automation for Tree Service Companies',
-    description: 'Automated Google review collection for tree service companies. Set up once, works after every job.',
+    title: 'Schnelks Media | Google Review Automation for Service Businesses',
+    description: 'Automated Google review collection for service-based businesses. Set up once, works after every job.',
     type: 'website',
   },
 };
