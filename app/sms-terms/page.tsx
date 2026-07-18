@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const terms = [
   {
     title: 'About Our SMS Service',
-    body: 'Schnelks Media operates an SMS messaging service on behalf of our clients (local service-based businesses, including tree service, home service, and similar trades). Our clients use our service to send a one-time review request message, plus an optional follow-up message, to their own customers after completing a service job.',
+    body: 'Schnelks Media operates an SMS messaging service on behalf of our clients (local service-based businesses, including home services, trades, and equipment rental companies). Our clients use our service to send a one-time review request message, plus an optional follow-up message, to their own customers after completing a service job.',
   },
   {
     title: 'How Recipients Are Added',

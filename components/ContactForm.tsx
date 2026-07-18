@@ -6,9 +6,6 @@ type Status = 'idle' | 'loading' | 'success' | 'error';
 
 const services = [
   'Review Automation',
-  'Google Ads',
-  'Meta Ads (Facebook / Instagram)',
-  'Review Automation + Ads',
   "Not sure yet — let's talk",
 ];
 

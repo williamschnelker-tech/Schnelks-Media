@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Services | Schnelks Media',
-  description: 'Google review automation and paid ads for service-based companies.',
+  description: 'Automated Google review collection for service-based businesses.',
 };
 
 const services = [
@@ -27,26 +27,6 @@ const services = [
     stat1: { value: '1 Text', label: 'Per Completed Job' },
     stat2: { value: '30 Min', label: 'Setup Time' },
     note: null,
-  },
-  {
-    id: 'ads',
-    badge: 'Additional Service',
-    headline: 'Google & Meta Ads',
-    description:
-      'If you want to grow your lead volume on top of your review automation, paid ads are the fastest way to do it. We run Google Search Ads and Meta (Facebook/Instagram) campaigns targeted at homeowners in your service area. This is an optional add-on — not required to get started.',
-    image: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&auto=format&fit=crop&q=80',
-    imageAlt: 'Google and Meta ads',
-    deliverables: [
-      'Google Search Ads — show up when people search for your services',
-      'Meta Ads — reach local homeowners on Facebook and Instagram',
-      'Campaign setup, targeting, and ongoing management',
-      'Conversion tracking so you know where leads come from',
-      'Regular performance updates in plain English',
-      'Budget management — no wasted spend',
-    ],
-    stat1: { value: 'Custom', label: 'Budget & Targeting' },
-    stat2: { value: '7–10 Days', label: 'To Launch' },
-    note: 'Ask about availability when you reach out.',
   },
 ];
 
@@ -93,10 +73,10 @@ export default function ServicesPage() {
             <span className="text-white">Service-Based Companies</span>
           </h1>
           <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
-            Review automation is our core service. Paid ads are available as an add-on if you want more leads too.
+            Automated Google review collection for service-based businesses. One text per completed job, zero extra work.
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {['Review Automation', 'Google Ads', 'Meta Ads'].map((s) => (
+            {['Review Automation'].map((s) => (
               <span key={s} className="px-3 py-1 rounded-full border text-slate-200" style={{background:'rgba(255,255,255,0.1)', borderColor:'rgba(255,255,255,0.2)'}}>
                 {s}
               </span>
