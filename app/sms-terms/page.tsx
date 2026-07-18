@@ -50,7 +50,7 @@ export default function SmsTermsPage() {
           <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-slate-900">
             SMS <span className="text-gradient">Terms of Service</span>
           </h1>
-          <p className="text-slate-400 text-sm">Effective Date: June 2, 2026</p>
+          <p className="text-slate-400 text-sm">Effective Date: July 17, 2026</p>
         </div>
       </section>
 
