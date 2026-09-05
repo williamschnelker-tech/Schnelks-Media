@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     description: 'Automated Google review collection for service-based businesses. Set up once, works after every job.',
     type: 'website',
   },
+  verification: {
+    google: 'qg8n9TpbwZkHEgAGtOVAYYi2wIT24rLp_zgJGXanF0E',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
