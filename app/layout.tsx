@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://schnelks-media.vercel.app'),
   title: 'Schnelks Media | Google Review Automation for Service-Based Businesses',
   description:
     'Automated Google review collection for service-based businesses. Set up once, works after every job.',
