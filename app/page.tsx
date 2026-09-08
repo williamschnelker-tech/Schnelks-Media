@@ -37,6 +37,11 @@ const whyReviews = [
   { title: 'Private Feedback Stays Private', description: 'If a customer isn\'t happy, they can reply directly — we forward it to you privately so it never becomes a public 1-star.' },
 ];
 
+const moreWaysWeHelp = [
+  { title: 'Website Design', description: 'Modern, professional websites built to turn visitors into customers.' },
+  { title: 'Digital Advertising', description: 'Local advertising campaigns designed to generate more leads.' },
+];
+
 export default function Home() {
   return (
     <>
@@ -150,6 +155,35 @@ export default function Home() {
           <p className="text-slate-500 text-lg leading-relaxed">
             Schnelks Media is currently onboarding its first group of service-based clients in Michigan. Founding clients lock in launch pricing for the life of their account.
           </p>
+        </div>
+      </section>
+
+      {/* More Ways We Help */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="section-tag mb-4">More Ways We Help</span>
+            <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-4 text-slate-900">
+              More Than Google Reviews.{' '}
+              <span className="text-gradient">Everything Else You Need to Grow Online.</span>
+            </h2>
+            <p className="text-slate-500 text-lg max-w-xl mx-auto">
+              Schnelks Media helps service-based businesses across Michigan build a stronger online presence and generate more customers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {moreWaysWeHelp.map((item) => (
+              <div key={item.title} className="card p-6">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-900 mb-4 bg-gray-50 border border-gray-200">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-slate-900 text-base mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
