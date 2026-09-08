@@ -50,7 +50,7 @@ export default function Home() {
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Built for Service-Based Companies</p>
+          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Michigan Marketing for Service-Based Businesses</p>
 
           <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
             More Google Reviews.<br />On Autopilot.
