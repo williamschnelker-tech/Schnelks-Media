@@ -29,7 +29,7 @@ const howItWorks = [
 ];
 
 const whyReviews = [
-  { title: 'Reviews Drive Local Rankings', description: 'Google uses your review count and rating as a local ranking signal. More reviews = higher placement in map results.' },
+  { title: 'Reviews Drive Local Rankings', description: 'Google reviews can strengthen your business\'s local presence and help build trust with potential customers. More high-quality reviews can help your business stand out in local search results.' },
   { title: 'Customers Read Before Calling', description: 'Over 90% of homeowners check reviews before hiring a service business. A strong rating closes the deal before you pick up the phone.' },
   { title: 'Most Happy Customers Don\'t Leave Reviews', description: 'Satisfied customers forget. An automated text right after the job is a proven way to reach customers while the work is still fresh.' },
   { title: 'Fully Automated — Zero Extra Work', description: 'You don\'t have to remember to ask or follow up. The system handles it while you\'re on to the next job.' },
