@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import TextMessageMock from '@/components/TextMessageMock';
 
 export const metadata: Metadata = {
   title: 'Services | Schnelks Media',
@@ -12,9 +13,7 @@ const services = [
     badge: 'Core Service',
     headline: 'Automated Google Review Collection',
     description:
-      'After your crew finishes a job, our system automatically sends the customer a text asking for a Google review — with a direct link. If they don\'t respond in a day or two, one follow-up goes out. That\'s it. Your rating climbs without you lifting a finger. All messages are fully compliant with Google\'s review policies, TCPA, and A2P 10DLC carrier requirements.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&auto=format&fit=crop&q=80',
-    imageAlt: 'SMS review automation',
+      'After your crew finishes a job, our system automatically sends the customer a text asking for a Google review — with a direct link. If they don\'t respond in a day or two, one follow-up goes out. That\'s it. All messages are fully compliant with Google\'s review policies, TCPA, and A2P 10DLC carrier requirements.',
     deliverables: [
       'Automated SMS sent after every completed job',
       'Direct link to your Google review page in every message',
@@ -57,36 +56,20 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="pt-32 pb-20 relative"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1514565131-fce0801e6139?w=1920&auto=format&fit=crop&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 text-white/90" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.3)'}}>Services</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
-            What We Do for{' '}
-            <span className="text-white">Service-Based Companies</span>
+      <section className="bg-paper pt-28 pb-16 sm:pt-36 sm:pb-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-5 text-sm font-medium text-pine">Services</p>
+          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+            What we do.
           </h1>
-          <p className="text-slate-200 text-lg max-w-2xl mx-auto mb-6">
-            Automated Google review collection for service-based businesses. One text per completed job, zero extra work.
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+            One text after every completed job, with a direct link to your Google review page. You do the work, we handle the asking.
           </p>
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            {['Review Automation'].map((s) => (
-              <span key={s} className="px-3 py-1 rounded-full border text-slate-200" style={{background:'rgba(255,255,255,0.1)', borderColor:'rgba(255,255,255,0.2)'}}>
-                {s}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Service Sections */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         {services.map((s, i) => (
           <section key={s.id} id={s.id} className="py-20 border-b border-slate-100 last:border-none">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -131,9 +114,7 @@ export default function ServicesPage() {
               </div>
 
               <div className={`relative ${i % 2 === 1 ? 'lg:order-first' : ''}`}>
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-slate-200">
-                  <img src={s.image} alt={s.imageAlt} className="w-full h-full object-cover" />
-                </div>
+                <TextMessageMock />
               </div>
             </div>
           </section>
@@ -142,7 +123,7 @@ export default function ServicesPage() {
 
       {/* Process */}
       <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="section-tag mb-4">Getting Started</span>
             <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 text-slate-900">

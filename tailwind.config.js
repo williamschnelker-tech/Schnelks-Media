@@ -11,6 +11,10 @@ module.exports = {
         space: ['var(--font-space)', 'sans-serif'],
       },
       colors: {
+        ink: '#14161A',
+        paper: '#F7F6F2',
+        pine: { DEFAULT: '#1F4D3A', dark: '#163A2B', light: '#E7EFEA' },
+        star: '#F4B400',
         brand: {
           300: '#93c5fd',
           400: '#60a5fa',

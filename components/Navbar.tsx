@@ -11,13 +11,29 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
+export function Logo() {
+  return (
+    <span className="flex items-center gap-2">
+      <span className="flex h-7 w-7 items-center justify-center rounded-md bg-pine">
+        <svg className="h-4 w-4 text-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.36 4.18a1 1 0 00.95.69h4.4c.97 0 1.37 1.24.59 1.81l-3.56 2.59a1 1 0 00-.36 1.12l1.36 4.18c.3.92-.76 1.69-1.54 1.12l-3.56-2.59a1 1 0 00-1.18 0l-3.56 2.59c-.78.57-1.84-.2-1.54-1.12l1.36-4.18a1 1 0 00-.36-1.12L1.75 9.61c-.78-.57-.38-1.81.59-1.81h4.4a1 1 0 00.95-.69l1.36-4.18z" />
+        </svg>
+      </span>
+      <span className="font-space text-lg font-bold text-ink">
+        Schnelks <span className="font-medium text-stone-500">Media</span>
+      </span>
+    </span>
+  );
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -28,36 +44,24 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
-          : 'bg-transparent'
+      className={`fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-xl transition-shadow duration-300 ${
+        scrolled || mobileOpen ? 'border-b border-stone-200 shadow-sm' : 'border-b border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform" style={{background: '#111827'}}>
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <span className={`font-space font-bold text-lg ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-              Schnelks<span className={scrolled ? 'text-gray-500' : 'text-white/70'}>Media</span>
-            </span>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <Link href="/" aria-label="Schnelks Media home">
+            <Logo />
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  pathname === link.href
-                    ? scrolled ? 'text-gray-900 bg-gray-100' : 'text-white bg-white/15'
-                    : scrolled ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100' : 'text-white/80 hover:text-white hover:bg-white/10'
+                className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                  pathname === link.href ? 'text-ink' : 'text-stone-500 hover:text-ink'
                 }`}
               >
                 {link.label}
@@ -67,23 +71,23 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Link href="/contact#book" className="btn-primary">
-              Get Started
+            <Link href="/contact#book" className="rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-pine">
+              Book a call
             </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`md:hidden p-2 rounded-lg transition-all ${scrolled ? 'text-slate-600 hover:text-slate-900 hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}
+            className="rounded-lg p-2 text-stone-600 transition-colors hover:bg-stone-100 hover:text-ink md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
@@ -92,28 +96,22 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="bg-white border-b border-slate-200 px-4 pb-4 pt-2 space-y-1">
+      <div className={`overflow-hidden transition-all duration-300 md:hidden ${mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="space-y-1 bg-white px-4 pb-4 pt-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                pathname === link.href
-                  ? 'text-gray-900 bg-gray-100'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+              className={`block rounded-lg px-4 py-2.5 text-sm font-medium ${
+                pathname === link.href ? 'bg-stone-100 text-ink' : 'text-stone-600 hover:bg-stone-100 hover:text-ink'
               }`}
             >
               {link.label}
             </Link>
           ))}
           <div className="pt-2">
-            <Link href="/contact#book" className="btn-primary block text-center">
-              Get Started
+            <Link href="/contact#book" className="block rounded-xl bg-ink px-5 py-3 text-center text-sm font-semibold text-white">
+              Book a call
             </Link>
           </div>
         </div>

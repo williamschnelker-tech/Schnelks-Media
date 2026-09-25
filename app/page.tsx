@@ -1,232 +1,160 @@
 import Link from 'next/link';
+import ReviewCard from '@/components/ReviewCard';
+import TextMessageMock from '@/components/TextMessageMock';
+import { reviews } from '@/lib/reviews';
 
-const stats = [
-  { value: '1 Text', label: 'Per Completed Job' },
-  { value: '100%', label: 'TCPA Compliant' },
-];
-
-const howItWorks = [
+const steps = [
   {
-    step: '01',
-    title: 'Job Gets Completed',
-    desc: 'Your crew finishes the job. You log the customer in the system — name and phone number, that\'s it.',
+    title: 'You finish the job.',
+    desc: "Add the customer's name and phone number. That's the only thing on your end.",
   },
   {
-    step: '02',
-    title: 'Customer Gets a Text',
-    desc: 'Our system automatically sends a friendly SMS asking them to leave a Google review, with a direct link.',
+    title: 'They get one friendly text.',
+    desc: "A short message with a direct link to your Google review page. If they don't answer, one polite reminder goes out a day or two later. Then it stops.",
   },
   {
-    step: '03',
-    title: 'Optional Follow-Up',
-    desc: 'If they don\'t respond in a day or two, they get one polite follow-up. Then it stops.',
-  },
-  {
-    step: '04',
-    title: 'Reviews Roll In',
-    desc: 'Your Google rating climbs. New customers find you, trust you, and call you instead of a competitor.',
+    title: 'The review lands on Google.',
+    desc: "Happy customers leave a review while the job is still fresh. If someone isn't happy and replies, it comes to you privately so you can make it right.",
   },
 ];
 
-const whyReviews = [
-  { title: 'Reviews Drive Local Rankings', description: 'Google reviews can strengthen your business\'s local presence and help build trust with potential customers. More high-quality reviews can help your business stand out in local search results.' },
-  { title: 'Customers Read Before Calling', description: 'Over 90% of homeowners check reviews before hiring a service business. A strong rating closes the deal before you pick up the phone.' },
-  { title: 'Most Happy Customers Don\'t Leave Reviews', description: 'Satisfied customers forget. An automated text right after the job is a proven way to reach customers while the work is still fresh.' },
-  { title: 'Fully Automated — Zero Extra Work', description: 'You don\'t have to remember to ask or follow up. The system handles it while you\'re on to the next job.' },
-  { title: 'Carrier & Google Compliant', description: 'All messages meet Google\'s review policies, TCPA requirements, and A2P 10DLC carrier standards.' },
-  { title: 'Private Feedback Stays Private', description: 'If a customer isn\'t happy, they can reply directly — we forward it to you privately so it never becomes a public 1-star.' },
-];
-
-const moreWaysWeHelp = [
-  { title: 'Website Design', description: 'Modern, professional websites built to turn visitors into customers.' },
-  { title: 'Digital Advertising', description: 'Local advertising campaigns designed to generate more leads.' },
+const details = [
+  'Setup takes about 30 minutes',
+  'Month to month, cancel anytime',
+  'Every text includes a STOP opt-out',
+  'We never ask for only good reviews',
+  "Follows Google's review policies, TCPA, and A2P 10DLC",
+  'Built for tree, lawn, roofing, and other home service companies',
 ];
 
 export default function Home() {
+  const [lily, rory, shawn] = reviews;
+
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative flex items-center justify-center overflow-hidden py-32"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&auto=format&fit=crop&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-5">Michigan Marketing for Service-Based Businesses</p>
-
-          <h1 className="font-space font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 text-white">
-            More Google Reviews.<br />On Autopilot.
-          </h1>
-
-          <p className="text-white/85 text-lg max-w-2xl mx-auto mb-3 leading-relaxed">
-            After every completed job, your customer automatically gets a text asking for a Google review — so your rating climbs while you focus on the work.
-          </p>
-
-          <p className="text-white/55 text-xs mb-10">
-            Compliant with Google&apos;s review policies, TCPA, and A2P 10DLC requirements.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/contact#book" className="text-base px-10 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 24px rgba(0,0,0,0.4)'}}>
-              Book a Free 15-Min Call
-            </Link>
-            <Link href="/services" className="text-base px-10 py-4 rounded-xl font-bold flex items-center gap-2 text-white transition-all duration-200" style={{background:'rgba(255,255,255,0.18)', border:'2px solid rgba(255,255,255,0.9)', backdropFilter:'blur(4px)'}}>
-              See How It Works
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+      <section className="bg-paper pt-28 pb-20 sm:pt-36 sm:pb-28">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
+          <div>
+            <p className="mb-5 text-sm font-medium text-pine">Google reviews for home service companies · Okemos, MI</p>
+            <h1 className="font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+              Turn finished jobs into Google reviews.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
+              After every job, your customer gets one friendly text with a link to review you on Google. No apps, no
+              chasing people down. You keep working and the reviews come in.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link href="/contact#book" className="rounded-xl bg-ink px-7 py-3.5 text-center font-semibold text-white transition-colors hover:bg-pine">
+                Book a free 15-min call
+              </Link>
+              <a href="tel:5178974843" className="rounded-xl px-5 py-3.5 text-center font-semibold text-ink underline-offset-4 hover:underline">
+                or call (517) 897-4843
+              </a>
+            </div>
           </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {stats.map((s) => (
-              <div key={s.label} className="flex items-center gap-3 px-5 py-3 rounded-xl" style={{background: 'rgba(255,255,255,0.95)'}}>
-                <span className="font-space font-bold text-xl text-gray-900">{s.value}</span>
-                <span className="text-gray-600 text-sm">{s.label}</span>
-              </div>
-            ))}
-          </div>
+          <TextMessageMock />
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-tag mb-4">How It Works</span>
-            <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-4 text-slate-900">
-              Set Up Once.{' '}
-              <span className="text-gradient">Works Every Job.</span>
-            </h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              You do the work. We handle the review collection.
+      {/* Real reviews */}
+      <section className="border-t border-stone-200 bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 className="font-space text-3xl font-bold tracking-tight text-ink sm:text-4xl">Real reviews from real jobs.</h2>
+            <p className="mt-4 text-lg leading-relaxed text-stone-600">
+              These came from customers of Michigan tree companies we&apos;ve worked with, after they got our text.
+              Word for word, straight from Google.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {howItWorks.map((item) => (
-              <div key={item.step} className="card p-6">
-                <div className="font-space font-bold text-4xl text-gray-900 mb-4">{item.step}</div>
-                <h3 className="font-space font-bold text-slate-900 text-lg mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+          <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-5">
+            <ReviewCard review={lily} className="lg:col-span-3" />
+            <div className="flex flex-col gap-5 lg:col-span-2">
+              <ReviewCard review={rory} />
+              <ReviewCard review={shawn} />
+            </div>
           </div>
+          <Link href="/work" className="mt-8 inline-block font-semibold text-pine underline-offset-4 hover:underline">
+            See all results →
+          </Link>
         </div>
       </section>
 
-      {/* Why Reviews Matter */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-tag mb-4">Why It Matters</span>
-            <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 text-slate-900">
-              Why Service-Based Companies{' '}
-              <span className="text-gradient">Need More Reviews</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyReviews.map((w) => (
-              <div key={w.title} className="card p-6">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-900 mb-4 bg-gray-50 border border-gray-200">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="font-space font-bold text-slate-900 text-base mb-2">{w.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{w.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Launching */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="section-tag mb-4">Now Onboarding</span>
-          <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-6 text-slate-900">
-            Launching in{' '}
-            <span className="text-gradient">Mid-Michigan</span>
-          </h2>
-          <p className="text-slate-500 text-lg leading-relaxed">
-            Schnelks Media is currently onboarding its first group of service-based clients in Michigan. Founding clients lock in launch pricing for the life of their account.
-          </p>
-        </div>
-      </section>
-
-      {/* More Ways We Help */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-tag mb-4">More Ways We Help</span>
-            <h2 className="font-space font-bold text-4xl sm:text-5xl mt-4 mb-4 text-slate-900">
-              More Than Google Reviews.{' '}
-              <span className="text-gradient">Everything Else You Need to Grow Online.</span>
-            </h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              Schnelks Media helps service-based businesses across Michigan build a stronger online presence and generate more customers.
+      {/* How it works */}
+      <section id="how-it-works" className="bg-paper py-20 sm:py-28">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:px-8">
+          <div>
+            <h2 className="font-space text-3xl font-bold tracking-tight text-ink sm:text-4xl">How it works</h2>
+            <p className="mt-4 text-lg leading-relaxed text-stone-600">
+              Most happy customers would leave a review. They just forget. A text right after the job fixes that.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {moreWaysWeHelp.map((item) => (
-              <div key={item.title} className="card p-6">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-900 mb-4 bg-gray-50 border border-gray-200">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <ol className="space-y-10">
+            {steps.map((s, i) => (
+              <li key={s.title} className="flex gap-6">
+                <span className="font-space text-lg font-bold text-pine">{i + 1}</span>
+                <div className="border-b border-stone-200 pb-10">
+                  <h3 className="font-space text-xl font-bold text-ink">{s.title}</h3>
+                  <p className="mt-2 leading-relaxed text-stone-600">{s.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* About + details */}
+      <section className="bg-white py-20 sm:py-28">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+          <div>
+            <h2 className="font-space text-3xl font-bold tracking-tight text-ink sm:text-4xl">Hi, I&apos;m Will.</h2>
+            <div className="mt-5 space-y-4 text-lg leading-relaxed text-stone-600">
+              <p>
+                I run Schnelks Media out of Okemos, Michigan. I work with a small number of home service companies,
+                set everything up for you, and I&apos;m the one who picks up when you call.
+              </p>
+              <p>
+                Need more than reviews? I also build websites and run local ads.{' '}
+                <Link href="/services" className="font-semibold text-pine underline-offset-4 hover:underline">
+                  See services
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">The details</h3>
+            <ul className="mt-5 divide-y divide-stone-200 border-y border-stone-200">
+              {details.map((d) => (
+                <li key={d} className="flex items-start gap-3 py-3.5 text-ink">
+                  <svg className="mt-1 h-4 w-4 shrink-0 text-pine" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
-                <h3 className="font-space font-bold text-slate-900 text-base mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+                  {d}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section
-        className="py-24 relative"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(15,23,42,0.92), rgba(15,23,42,0.92)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&auto=format&fit=crop&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl p-12 text-center bg-slate-900">
-            <h2 className="font-space font-bold text-4xl sm:text-5xl text-white mb-4">
-              Ready to Start Getting More Reviews?
-            </h2>
-            <p className="text-slate-300 text-lg max-w-xl mx-auto mb-4">
-              Get set up in 30 minutes. After that, every job you complete is another review request sent automatically.
-            </p>
-            <p className="text-slate-500 text-sm mb-10">No contracts. No extra work on your end.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact#book" className="btn-primary text-base px-10 py-4">
-                Book a Free Call
-              </Link>
-              <Link href="/services" className="px-8 py-4 rounded-xl border border-white/20 text-white font-semibold text-base hover:bg-white/5 transition-all">
-                Learn More
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-500">
-              <a href="tel:5178974843" className="flex items-center gap-2 hover:text-slate-300 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                (517) 897-4843
-              </a>
-              <a href="mailto:williamschnelker@gmail.com" className="flex items-center gap-2 hover:text-slate-300 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                williamschnelker@gmail.com
-              </a>
-            </div>
+      <section className="bg-pine py-20 sm:py-24">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="font-space text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Want to see if it fits your business?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
+            It&apos;s a 15-minute phone call. No pressure. Companies that sign on now keep launch pricing for as long as
+            they stay.
+          </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link href="/contact#book" className="rounded-xl bg-white px-7 py-3.5 font-semibold text-ink transition-colors hover:bg-paper">
+              Book a free call
+            </Link>
+            <a href="tel:5178974843" className="px-5 py-3.5 font-semibold text-white underline-offset-4 hover:underline">
+              (517) 897-4843
+            </a>
           </div>
         </div>
       </section>

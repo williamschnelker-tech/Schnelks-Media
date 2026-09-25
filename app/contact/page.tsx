@@ -92,26 +92,14 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="pt-32 pb-16 relative"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1920&auto=format&fit=crop&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 text-white/90" style={{background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.3)'}}>Let&apos;s Talk</span>
-          <h1 className="font-space font-bold text-5xl sm:text-6xl mt-4 mb-6 text-white">
-            Get in Touch with{' '}
-            <span className="text-gray-300">Schnelks Media</span>
+      <section className="bg-paper pt-28 pb-16 sm:pt-36 sm:pb-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-5 text-sm font-medium text-pine">Contact</p>
+          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+            Let&apos;s talk.
           </h1>
-          <p className="text-slate-200 text-lg mb-4">
-            Have a question about our review automation service? Want to see how it could work for your business? Reach out — we typically respond within one business day.
-          </p>
-          <p className="text-slate-300 text-sm">
-            Book a free 15-minute call below, send a message, or call us directly at (517) 897-4843.
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+            Book a free 15-minute call below, send a message, or call (517) 897-4843. You&apos;ll be talking to Will, not a call center.
           </p>
         </div>
       </section>
@@ -140,7 +128,7 @@ export default function ContactPage() {
 
       {/* Main content */}
       <section className="pb-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Left: Info */}
             <div className="lg:col-span-2 space-y-8">
