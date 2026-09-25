@@ -14,9 +14,9 @@ const navLinks = [
 export function Logo() {
   return (
     <span className="flex items-center gap-2">
-      <span className="flex h-7 w-7 items-center justify-center rounded-md bg-pine">
-        <svg className="h-4 w-4 text-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.36 4.18a1 1 0 00.95.69h4.4c.97 0 1.37 1.24.59 1.81l-3.56 2.59a1 1 0 00-.36 1.12l1.36 4.18c.3.92-.76 1.69-1.54 1.12l-3.56-2.59a1 1 0 00-1.18 0l-3.56 2.59c-.78.57-1.84-.2-1.54-1.12l1.36-4.18a1 1 0 00-.36-1.12L1.75 9.61c-.78-.57-.38-1.81.59-1.81h4.4a1 1 0 00.95-.69l1.36-4.18z" />
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#111827]">
+        <svg className="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       </span>
       <span className="font-space text-lg font-bold text-ink">

@@ -92,13 +92,20 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-paper pt-28 pb-16 sm:pt-36 sm:pb-20">
+      <section
+        className="pt-28 pb-16 sm:pt-36 sm:pb-20"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-5 text-sm font-medium text-pine">Contact</p>
-          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+          <p className="mb-5 text-sm font-medium text-white/75">Contact</p>
+          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl">
             Let&apos;s talk.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
             Book a free 15-minute call below, send a message, or call (517) 897-4843. You&apos;ll be talking to Will, not a call center.
           </p>
         </div>

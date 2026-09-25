@@ -34,27 +34,34 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-paper pt-28 pb-20 sm:pt-36 sm:pb-28">
+      <section
+        className="pt-28 pb-20 sm:pt-36 sm:pb-28"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div>
-            <p className="mb-5 text-sm font-medium text-pine">Google reviews for home service companies · Okemos, MI</p>
-            <h1 className="font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+            <p className="mb-5 text-sm font-medium text-white/75">Google reviews for home service companies · Okemos, MI</p>
+            <h1 className="font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl">
               Turn finished jobs into Google reviews.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
               After every job, your customer gets one friendly text with a link to review you on Google. No apps, no
               chasing people down. You keep working and the reviews come in.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link href="/contact#book" className="rounded-xl bg-ink px-7 py-3.5 text-center font-semibold text-white transition-colors hover:bg-pine">
+              <Link href="/contact#book" className="rounded-xl bg-white px-7 py-3.5 text-center font-semibold text-ink transition-colors hover:bg-paper">
                 Book a free 15-min call
               </Link>
-              <a href="tel:5178974843" className="rounded-xl px-5 py-3.5 text-center font-semibold text-ink underline-offset-4 hover:underline">
+              <a href="tel:5178974843" className="rounded-xl px-5 py-3.5 text-center font-semibold text-white underline-offset-4 hover:underline">
                 or call (517) 897-4843
               </a>
             </div>
           </div>
-          <TextMessageMock />
+          <TextMessageMock onDark />
         </div>
       </section>
 

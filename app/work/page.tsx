@@ -14,13 +14,20 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-paper pt-28 pb-16 sm:pt-36 sm:pb-20">
+      <section
+        className="pt-28 pb-16 sm:pt-36 sm:pb-20"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&auto=format&fit=crop&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-5 text-sm font-medium text-pine">Results</p>
-          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
+          <p className="mb-5 text-sm font-medium text-white/75">Results</p>
+          <h1 className="max-w-3xl font-space text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl">
             Real reviews, left by real customers.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
             Every review below was left on Google by a customer of a company we&apos;ve worked with, after they got our review
             text. Word for word. Last names are shortened for privacy, and one company name is left out.
           </p>
