@@ -67,7 +67,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact#book" className="btn-primary">
               Get Started
             </Link>
           </div>
@@ -112,7 +112,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-2">
-            <Link href="/contact" className="btn-primary block text-center">
+            <Link href="/contact#book" className="btn-primary block text-center">
               Get Started
             </Link>
           </div>

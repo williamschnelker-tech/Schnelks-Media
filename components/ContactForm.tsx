@@ -14,9 +14,9 @@ export default function ContactForm() {
   const [form, setForm] = useState({
     name: '',
     email: '',
+    phone: '',
     business: '',
     service: '',
-    budget: '',
     message: '',
   });
 
@@ -37,7 +37,7 @@ export default function ContactForm() {
       });
       if (res.ok) {
         setStatus('success');
-        setForm({ name: '', email: '', business: '', service: '', budget: '', message: '' });
+        setForm({ name: '', email: '', phone: '', business: '', service: '', message: '' });
       } else {
         setStatus('error');
       }
@@ -104,19 +104,35 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div>
-          <label htmlFor="business" className="block text-slate-600 text-xs mb-2 font-medium">
-            Business Name
-          </label>
-          <input
-            id="business"
-            name="business"
-            type="text"
-            value={form.business}
-            onChange={handleChange}
-            placeholder="Your Company LLC"
-            className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="phone" className="block text-slate-600 text-xs mb-2 font-medium">
+              Phone Number
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="(517) 555-0123"
+              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
+            />
+          </div>
+          <div>
+            <label htmlFor="business" className="block text-slate-600 text-xs mb-2 font-medium">
+              Business Name
+            </label>
+            <input
+              id="business"
+              name="business"
+              type="text"
+              value={form.business}
+              onChange={handleChange}
+              placeholder="Your Company LLC"
+              className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-gray-200 focus:ring-1 focus:ring-gray-900/10 transition-all"
+            />
+          </div>
         </div>
 
         <div>

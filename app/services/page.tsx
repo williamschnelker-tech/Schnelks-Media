@@ -125,7 +125,7 @@ export default function ServicesPage() {
                   </div>
                 )}
 
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact#book" className="btn-primary">
                   Get Started →
                 </Link>
               </div>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
             {' '}·{' '}
             <a href="mailto:williamschnelker@gmail.com" className="text-gray-900 hover:text-gray-900">williamschnelker@gmail.com</a>
           </p>
-          <Link href="/contact" className="btn-primary text-base px-10 py-4">
+          <Link href="/contact#book" className="btn-primary text-base px-10 py-4">
             Get Started
           </Link>
         </div>

@@ -70,8 +70,8 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/contact" className="text-base px-10 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 24px rgba(0,0,0,0.4)'}}>
-              Get Started
+            <Link href="/contact#book" className="text-base px-10 py-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 bg-white text-gray-900 hover:bg-gray-100" style={{boxShadow:'0 4px 24px rgba(0,0,0,0.4)'}}>
+              Book a Free 15-Min Call
             </Link>
             <Link href="/services" className="text-base px-10 py-4 rounded-xl font-bold flex items-center gap-2 text-white transition-all duration-200" style={{background:'rgba(255,255,255,0.18)', border:'2px solid rgba(255,255,255,0.9)', backdropFilter:'blur(4px)'}}>
               See How It Works
@@ -206,8 +206,8 @@ export default function Home() {
             </p>
             <p className="text-slate-500 text-sm mb-10">No contracts. No extra work on your end.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary text-base px-10 py-4">
-                Get Started
+              <Link href="/contact#book" className="btn-primary text-base px-10 py-4">
+                Book a Free Call
               </Link>
               <Link href="/services" className="px-8 py-4 rounded-xl border border-white/20 text-white font-semibold text-base hover:bg-white/5 transition-all">
                 Learn More

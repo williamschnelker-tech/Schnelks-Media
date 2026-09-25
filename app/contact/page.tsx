@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import CalendlyEmbed, { CALENDLY_URL } from '@/components/CalendlyEmbed';
 
 export const metadata: Metadata = {
   title: 'Contact | Schnelks Media',
@@ -110,7 +111,29 @@ export default function ContactPage() {
             Have a question about our review automation service? Want to see how it could work for your business? Reach out — we typically respond within one business day.
           </p>
           <p className="text-slate-300 text-sm">
-            Send a message below or call us directly at (517) 897-4843.
+            Book a free 15-minute call below, send a message, or call us directly at (517) 897-4843.
+          </p>
+        </div>
+      </section>
+
+      {/* Book a call */}
+      <section id="book" className="pt-16 pb-16 bg-white scroll-mt-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="font-space font-bold text-3xl text-slate-900 mb-3">Book a Free 15-Minute Call</h2>
+            <p className="text-slate-500">
+              Pick a time that works for you. We&apos;ll call you at the number you provide.
+            </p>
+          </div>
+          <div className="card overflow-hidden">
+            <CalendlyEmbed />
+          </div>
+          <p className="text-center text-slate-400 text-sm mt-4">
+            Calendar not loading?{' '}
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-gray-900 underline">
+              Open it in a new tab
+            </a>
+            .
           </p>
         </div>
       </section>
@@ -148,6 +171,7 @@ export default function ContactPage() {
                 <h2 className="font-space font-bold text-xl text-slate-900 mb-6">What to Expect</h2>
                 <ul className="space-y-4">
                   {[
+                    'A quick 15-minute phone call — we call you',
                     'See exactly how the review automation works',
                     'Learn what setup looks like for your business',
                     'Get answers to any questions you have',
