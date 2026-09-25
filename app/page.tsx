@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ReviewCard from '@/components/ReviewCard';
 import TextMessageMock from '@/components/TextMessageMock';
 import { reviews } from '@/lib/reviews';
@@ -107,7 +108,16 @@ export default function Home() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <div>
-            <h2 className="font-space text-3xl font-bold tracking-tight text-ink sm:text-4xl">Hi, I&apos;m Will.</h2>
+            <div className="flex items-center gap-5">
+              <Image
+                src="/will.jpg"
+                alt="Will Schnelker, founder of Schnelks Media"
+                width={924}
+                height={1109}
+                className="h-24 w-24 shrink-0 rounded-full object-cover object-top sm:h-28 sm:w-28"
+              />
+              <h2 className="font-space text-3xl font-bold tracking-tight text-ink sm:text-4xl">Hi, I&apos;m Will.</h2>
+            </div>
             <div className="mt-5 space-y-4 text-lg leading-relaxed text-stone-600">
               <p>
                 I run Schnelks Media out of Okemos, Michigan. I work with a small number of home service companies,

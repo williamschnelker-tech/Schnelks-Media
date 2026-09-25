@@ -22,7 +22,7 @@ export default function WorkPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
             Every review below was left on Google by a customer of a company we&apos;ve worked with, after they got our review
-            text. Nothing is edited. Last names are shortened for privacy.
+            text. Word for word. Last names are shortened for privacy, and one company name is left out.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function WorkPage() {
               <div key={company} className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2fr] lg:gap-14">
                 <div>
                   <h2 className="font-space text-2xl font-bold text-ink">{company}</h2>
-                  <p className="mt-2 text-stone-600">Tree service · Michigan</p>
+                  {!company.startsWith('A ') && <p className="mt-2 text-stone-600">Tree service · Michigan</p>}
                 </div>
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                   {companyReviews.map((r) => (

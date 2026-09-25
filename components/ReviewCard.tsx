@@ -33,7 +33,7 @@ export default function ReviewCard({ review, className = '' }: { review: Review;
         <p className="mt-3 text-sm italic text-stone-400">Left a 5-star rating.</p>
       )}
       <figcaption className="mt-auto pt-5 text-xs text-stone-500">
-        For <span className="font-medium text-ink">{review.company}</span>
+        For <span className="font-medium text-ink">{review.company.replace(/^A /, 'a ')}</span>
         {review.service && <> · {review.service}</>}
       </figcaption>
     </figure>

@@ -1,5 +1,6 @@
 // Real Google reviews left by clients' customers after receiving our review-request text.
 // Copied word for word from Google. Last names shortened to an initial for privacy.
+// One former client is intentionally not named: their company name is replaced with [They].
 export type Review = {
   name: string;
   company: string;
@@ -22,10 +23,10 @@ Lily`,
   },
   {
     name: 'Rory C.',
-    company: "True Man's Tree Service",
+    company: 'A Michigan tree service',
     rating: 5,
     service: 'Tree removal',
-    text: "Had a very tall pine tree dropping branches on my house. True Man's tree service removed it quickly and safely. Their clean up was incredible. Highly recommend them!",
+    text: "Had a very tall pine tree dropping branches on my house. [They] removed it quickly and safely. Their clean up was incredible. Highly recommend them!",
   },
   {
     name: 'Shawn P.',
